@@ -1,0 +1,925 @@
+<!doctype html>
+<!--
+	Lamoda by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+
+<html lang="en-gb" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>TrackVac</title>
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!--styles -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet">
+    <link href="/Afiles/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Afiles/css/font-awesome.css" rel="stylesheet">
+    <link href="/Afiles/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="/Afiles/js/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="/Afiles/js/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="/Afiles/css/magnific-popup.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Afiles/css/animate.css" />
+    <link rel="stylesheet" href="/Afiles/css/etlinefont.css">
+    <link href="/Afiles/css/style.css" type="text/css" rel="stylesheet" />
+
+
+    <style>
+        div.online-indicator {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            background-color: #0fcc45;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        span.blink {
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-color: #0fcc45;
+            opacity: 0.7;
+            border-radius: 50%;
+            animation: blink 1s linear infinite;
+        }
+
+        /*Animations*/
+        @keyframes blink {
+            100% {
+                transform: scale(2, 2);
+                opacity: 0;
+            }
+        }
+
+        .button {
+            border: none;
+            background-color: #D3E0EA;
+            color: #276678;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 8px 4px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+
+        .button1 {
+            border: none;
+            background-color: #D3E0EA;
+            color: #276678;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 8px 4px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+
+        .popup1 {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* The actual popup */
+        .popup1 .popuptext1 {
+            visibility: hidden;
+            width: 400px;
+            height: 300px;
+            background-color: #F6F5F5;
+            color: #276678;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            margin-top: 100%;
+            left: 50%;
+            margin-left: -80px;
+        }
+
+        /* Popup arrow */
+        .popup1 .popuptext1::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #D3E0EA transparent transparent transparent;
+        }
+
+        /* Toggle this class - hide and show the popup */
+        .popup1 .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .User {
+            background-color: #1687A7;
+            width: 400px;
+            height: 100px;
+        }
+    </style>
+
+
+<body data-spy="scroll" data-target="#main-menu">
+
+
+    <!--Start Page loader -->
+    <div id="pageloader">
+        <div class="loader">
+            <img src="/images/progress.gif" alt='loader' />
+        </div>
+    </div>
+    <!--End Page loader -->
+
+
+    <!--Start Navigation-->
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#main-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--Start Logo -->
+                    <div class="logo-nav">
+                        <a href="">
+                            <img src="/images/white png logo.png" width="150" height="100" alt="Company logo" />
+                        </a>
+                    </div>
+                    <!--End Logo -->
+                    <div class="clear-toggle"></div>
+                    <div id="main-menu" class="collapse scroll navbar-right">
+
+                        <ul class="nav">
+
+                            <li class="active"> <a href="#home">Home</a> </li>
+
+                            <li> <a href="http://localhost:3000/trackvac-api/admin/reviews">Reviews</a> </li>
+
+                            <li> <a href="http://localhost:3000/trackvac-api/admin/questions">Questions</a> </li>
+
+                            <li> <a href="#contact">Add Medical Center</a> </li>
+
+                            <li> <a href="#skills">website statistics</a> </li>
+
+                            <li> <a href="http://localhost:3000/trackvac-api/admin/addadmin">Add Admin</a> </li>
+
+                            <li> <a href="http://localhost:3000/trackvac-api/admin/logut">Log Out</a> </li>
+                        </ul>
+                    </div><!-- end main-menu -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End Navigation-->
+
+
+    <!-- Start Slider  -->
+    <section id="home" class="home">
+        <div class="slider-overlay"></div>
+        <div class="flexslider">
+            <ul class="slides scroll">
+                <li class="first">
+                    <div class="slider-text-wrapper">
+                        <div class="container">
+                            <div class="big">
+                                Monitor Reviews</div>
+                            <div class="small">to delete and Monitor Reviews </div>
+                            <a href="http://localhost:3000/trackvac-api/admin/reviews" class="middle btn btn-white">VIEW
+                                REVIEWS</a>
+                        </div>
+                    </div>
+                    <img src="/images/review3.jpg" alt="">
+                </li>
+
+                <li class="secondary">
+                    <div class="slider-text-wrapper">
+                        <div class="container">
+                            <div class="big">Monitor Questions </div>
+                            <div class="small">to delete and Monitor Questions </div>
+                            <a href="http://localhost:3000/trackvac-api/admin/questions"
+                                class=" middle btn btn-white">VIEW Questions</a>
+                        </div>
+                    </div>
+                    <img src="/images/question.jpg" alt="">
+                </li>
+
+                <li class="third">
+                    <div class="slider-text-wrapper">
+                        <div class="container">
+                            <div class="big">Add Medical Centers </div>
+                            <div class="small">You Can Add New Medical Centers from Here!</div>
+                            <a href="#contact" class="middle btn btn-white">Add Medical Center</a>
+                        </div>
+                    </div>
+                    <img src="/images/contact.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- End Slider  -->
+
+
+
+
+
+
+    <!--Start Features-->
+    <section id="Reviews" class="section">
+        <div class="container">
+            <div class="row">
+
+
+
+            </div> <!-- /.row-->
+        </div> <!-- /.container-->
+    </section>
+
+
+    <section id="Questions" class="section">
+        <div class="container">
+            <div class="row">
+
+
+
+            </div> <!-- /.row-->
+        </div> <!-- /.container-->
+    </section>
+    <!--End Features-->
+
+
+    <!-- Start Facts-->
+    <section id="facts" class="section parallax">
+        <div class="overlay"> <img src="/images/page-header.jpg" alt='image'> </div>
+        <div class="container">
+
+            <div class="row">
+
+
+                <!-- Start Item-->
+                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30" style="margin-left: 150px;">
+                    <span><i class="icon-happy"></i></span>
+                    <h3>
+                        <%= adminReturn.reviewsLength%>
+                    </h3>
+                    <span>Reviews</span>
+                </div>
+                <!-- End Item-->
+
+                <!-- Start Item-->
+                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">
+                    <span><i class="icon-presentation"></i></span>
+                    <h3>
+                        <%= adminReturn.placesLength%>
+                    </h3>
+                    <span>Medical Centers</span>
+                </div>
+                <!-- End Item-->
+
+
+
+                <!-- Start Item-->
+                <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">
+                    <span><i class="icon-target"></i></span>
+                    <h3>
+                        <%= adminReturn.questionsLength%>
+                    </h3>
+                    <span>Questions</span>
+                </div>
+                <!-- End Item-->
+
+                <!-- Start Item-->
+
+                <!-- End Item-->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+        <img src="review3.jpg" alt="">
+    </section>
+    <!--End Facts-->
+
+
+    <!--Start Section-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--End Section-->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--Start Team-->
+
+    <!--End Team-->
+    <div style="height:50px;"></div>
+
+    <!--Start Skills-->
+    <section id="skills" class="section parallax">
+        <div class="overlay"> <img src="/images/parallax/aboutworld.jpg" alt='imageID'
+                style='width:auto; height:auto; display:block; max-height: 100%; width:100%'>
+        </div>
+        <div class="container">
+            <div class="row">
+
+                <div class="title-box text-center white">
+                    <h2 class="title">website Statistics</h2>
+                </div>
+
+                <!--Skill #1-->
+
+
+
+
+
+                <!--Skill #2-->
+                <div class="col-sm-3 col-md-3 col-lg-3 pie-chart-main" style="margin-left: 300px;">
+                    <span class="pie-chart"
+                        data-percent="<%= adminReturn.reportedReviews%>">
+                        <span class="percent"></span>
+                    </span>
+                    <h4>Reported Reviews</h4>
+
+                </div>
+
+
+
+                <!--Skill #3-->
+                <div class="col-sm-3 col-md-3 col-lg-3 pie-chart-main">
+                    <span class="pie-chart "
+                        data-percent="<%= adminReturn.lowestQuestions%>">
+                        <span class="percent"></span>
+                    </span>
+                    <h4>Reported Questions</h4>
+                    <p></p>
+                </div>
+
+                <!--Skill #4-->
+
+
+
+            </div> <!-- /.row-->
+        </div> <!-- /.container-->
+    </section>
+    <!--End Skills-->
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- Start blog-->
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="row">
+
+                <div class="title-box text-center">
+                    <h2 class="title">Medical Centers</h2>
+                </div>
+
+
+
+                <label for="Governorate" style="margin-left: 300px;  font-size: 25px;"><strong>Choose a Governorate:
+                    </strong></label>
+                <select name="Governorate" id="GovernorateDelete" style="width: 400px;" onChange="deletePlaces(event)">
+                    <option value="null" selected>Please Choose a City</option>
+                    <% for(let i=0;i<adminReturn.cities.length;i++){%>
+                        <option value="<%=adminReturn.cities[i]._id%>">
+                            <%=adminReturn.cities[i].name%>
+                        </option>
+                        <% } %>
+                </select>
+                <div>
+                    <input type="text" style="width: 150px; align-self: right; background-color: rgb(120, 195, 224);"
+                        class=' form-control' name="s" id="form-control_1" value="" />
+                    <button class="btn btn-info" onClick="searchReturnDiv()" style="align-self: right;">Search</button>
+                </div>
+
+                <!-- Start Blog item #1-->
+                <div id="deleteCenter">
+                </div>
+
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </section>
+    <!-- End blog-->
+
+    <!--Start Testimonial-->
+    <section id="testimonials" class="section parallax">
+        <div class="overlay"> <img src="/images/slider/vaccine.jpg" alt='imageID'
+                style='width:auto; height:auto; display:block; height: 100%; width:100%'></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="title-box text-center white">
+                    <h2 class="title">Edit Medical Center</h2>
+                </div>
+
+
+                <div class="col-md-8 col-md-offset-2 contact-form">
+                    <div class="row">
+                        <br>
+                        <br>
+                        <div class="col-md-3">
+                            <label for="City" , class="write" style="color: #276678;">Governorates</label>
+                            <select name="Governorate" id="City" style="color:cadetblue" onChange="updateDB(event)">
+                                <option value="null" selected>Please Choose a Governorate</option>
+                                <% for(let i=0;i<adminReturn.cities.length;i++){%>
+                                    <option value="<%=adminReturn.cities[i]._id%>">
+                                        <%=adminReturn.cities[i].name%>
+                                    </option>
+                                    <% } %>
+                            </select>
+
+                        </div>
+                        <div class="col-md-3">
+                            <label for="Place" , class="write" style="color: #276678;">Districts</label>
+                            <select name="Governorate" id="Place" style="color:cadetblue" onChange="updateBoxes(event)">
+                                <option value="null" selected>Please Choose a District</option>
+                            </select>
+
+                        </div>
+                        <div class="col-md-3">
+                            <label for="District Name" , class="write" style="color: #276678;">Name</label>
+                            <input class="form-control" id="Nametext AddM3" type="text">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="Location" , class="write" style="color: #276678;">Location</label>
+                            <input class="form-control" id="Locationtext AddM3" type="text">
+                        </div>
+
+                        <br>
+                        <div>
+                            <input type="text" class='form-control' name="s" id="form-control"
+                                style="width: 150px; align-self: center;" value="" />
+                            <button class="btn btn-info" onClick="searchArr('Place')"
+                                style="align-self: center;">Search</button>
+                        </div>
+
+                        <div class="col-md-12 text-right">
+                            <button type="submit" class="button1" onClick='editCenter()'>Edit Center</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </section>
+    <!--Start Testimonial-->
+
+
+    <!--Start clients-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--End clients-->
+
+
+    <!--Start Contact-->
+    <section id="contact" class="section parallax">
+        <div class="overlay"> <img src="/images/contact.jpg" alt='imageID'
+                style='width:auto; height:auto; display:block; height: 100%; width:100%'> </div>
+        <div class="container">
+            <div class="row">
+
+                <div class="title-box text-center white">
+                    <h2 class="title">Add Medical Center</h2>
+                </div>
+            </div>
+
+            <!--Start contact form-->
+            <div class="col-md-8 col-md-offset-2 contact-form">
+
+                <div class="row">
+
+                    <br>
+                    <br>
+                    <div class="col-md-4">
+                        <label for="Medical Center Name" , class="write" style="color: #276678;">Medical Center
+                            Name</label>
+                        <input class="form-control" id="AddM1" type="text">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="District" , class="write" style="color: #276678;">Location</label>
+                        <input class="form-control" id="AddM12" type="text">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Governorate" , class="write" style="color: #276678; ">Governorate</label>
+                        <select name="Governorate" id="GovernorateDelete" style="color:cadetblue"
+                            onChange="updateCityID(event)">
+                            <option value="null" selected>Please Choose a City</option>
+                            <% for(let i=0;i<adminReturn.cities.length;i++){%>
+                                <option value="<%=adminReturn.cities[i]._id%>">
+                                    <%=adminReturn.cities[i].name%>
+                                </option>
+                                <% } %>
+                        </select>
+                    </div>
+
+                    <br>
+
+
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="button1" onClick='addCenter()'>Add Center</button>
+                    </div>
+                </div>
+            </div>
+            <!--End contact form-->
+
+        </div> <!-- /.container-->
+    </section>
+    <!--End Contact-->
+
+
+
+
+
+
+
+
+    <!--Start Footer-->
+    <footer style="background-color:#1687A7">
+        <div class="container">
+            <div class="row">
+                <!--Start copyright-->
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="copyright">
+                        <p class="copyright1">Copyright © 2021 All Rights reserved by:<span id="globalCity"></span>
+                            <span id="globalPlace"></span><a href="http://www.ieee.org">TrackVac</a>
+                        </p>
+                    </div>
+                </div>
+                <!--End copyright-->
+
+                <!--start social icons-->
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li> <a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End social icons-->
+                <div>
+
+                </div>
+            </div> <!-- /.row-->
+        </div> <!-- /.container-->
+    </footer>
+    <!--End Footer-->
+
+    <a href="" class="scrollup" style="background-color: #276678;"> <i class="fa fa-chevron-up"> </i> </a>
+
+    <!--Plugins-->
+    <script type="text/javascript" src="/Afiles/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/Afiles/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Afiles/js/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="/Afiles/js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="/Afiles/js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="/Afiles/js/easing.js"></script>
+    <script type="text/javascript" src="/Afiles/js/jquery.easypiechart.js"></script>
+    <script type="text/javascript" src="/Afiles/js/jquery.appear.js"></script>
+    <script type="text/javascript" src="/Afiles/js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="/Afiles/js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="/Afiles/js/custom.js"></script>
+    <script>
+        async function deletePlaces(event) {
+            const reqPlaces = new XMLHttpRequest();
+            const url = `http://localhost:3000/trackvac-api/reviews/${event.target.value}`;
+            reqPlaces.onreadystatechange = myfunction;
+            reqPlaces.open("GET", url, true);
+            reqPlaces.send(null);
+            const reqDiv = document.getElementById('deleteCenter');
+            if (event.target.value == 'null') {
+                while (reqDiv.firstChild) {
+                    reqDiv.firstChild.remove();
+                }
+            }
+            if (event.target.value == 'null') {
+                return;
+            }
+            async function myfunction() {
+                if (reqPlaces.readyState == 4) {
+                    let res = await reqPlaces.responseText;
+                    res = JSON.parse(res);
+                    while (reqDiv.firstChild) {
+                        reqDiv.firstChild.remove();
+                    }
+                    for (let i = 0; i < res.length; i++) {
+                        const tmpDiv = document.createElement('div');
+                        tmpDiv.setAttribute('class', 'col-md-4');
+                        const tmpDiv_2 = document.createElement('div');
+                        tmpDiv_2.setAttribute('class', 'blog-post');
+                        const tmpDiv_3 = document.createElement('div');
+                        tmpDiv_3.setAttribute('class', 'post-media');
+                        const tmpDiv_4 = document.createElement('div');
+                        tmpDiv_3.setAttribute('class', 'post-desc');
+                        const image = document.createElement('img');
+                        image.setAttribute('src', '/images/testimonials.jpg');
+                        const h = document.createElement('h4');
+                        h.innerHTML = `${res[i].name}`;
+                        const btn = document.createElement('button');
+                        btn.setAttribute('type', 'submit');
+                        btn.setAttribute('class', 'button1');
+                        btn.setAttribute('onClick', 'deleteSelf(this)');
+                        btn.setAttribute('id', `http://localhost:3000/trackvac-api/admin/place/${res[i]._id}?_method=DELETE`)
+                        btn.innerHTML = 'Delete Center';
+                        tmpDiv_3.appendChild(image);
+                        tmpDiv_4.appendChild(h);
+                        tmpDiv_4.appendChild(btn);
+                        tmpDiv_2.appendChild(tmpDiv_3);
+                        tmpDiv_2.appendChild(tmpDiv_4);
+                        tmpDiv.appendChild(tmpDiv_2);
+                        reqDiv.appendChild(tmpDiv);
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function deleteSelf(el) {
+            const deletePlace = new XMLHttpRequest();
+            const url = `${el.getAttribute('id')}`;
+            deletePlace.onreadystatechange = myfunction;
+            deletePlace.open("POST", url, true);
+            deletePlace.setRequestHeader('X-HTTP-Method-Override', 'DELETE');
+            deletePlace.send(null);
+            async function myfunction() {
+                if (deletePlace.readyState == 4) {
+                    let res = await deletePlace.responseText;
+                    res = JSON.parse(res);
+                    if (res.success == true) {
+                        el.parentElement.parentElement.parentElement.remove();
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script>
+        async function updateDB(event) {
+            const dropBox = document.getElementById('Place');
+            const reqPlaces = new XMLHttpRequest();
+            const url = `http://localhost:3000/trackvac-api/places/${event.target.value}`;
+            reqPlaces.onreadystatechange = myfunction;
+            reqPlaces.open("GET", url, true);
+            reqPlaces.send(null);
+            async function myfunction() {
+                if (reqPlaces.readyState == 4) {
+                    let res = await reqPlaces.responseText;
+                    res = JSON.parse(res);
+                    while (dropBox.firstChild) {
+                        dropBox.firstChild.remove();
+                    }
+                    const tmpOption = document.createElement('option');
+                    tmpOption.setAttribute('Selected', true);
+                    tmpOption.setAttribute('value', 'null');
+                    tmpOption.innerHTML = 'Please Choose a Place';
+                    dropBox.appendChild(tmpOption);
+                    for (let i = 0; i < res.length; i++) {
+                        const tmpOpt = document.createElement('option');
+                        tmpOpt.setAttribute('value', res[i]._id);
+                        tmpOpt.innerHTML = `${res[i].name}`;
+                        dropBox.appendChild(tmpOpt);
+                    }
+                    const tmpSpan = document.getElementById('globalCity');
+                    tmpSpan.setAttribute('class', `${event.target.value}`);
+                }
+            }
+        }
+    </script>
+    <script>
+        async function updateBoxes(event) {
+            const nameText = document.getElementById('Nametext AddM3');
+            const locText = document.getElementById('Locationtext AddM3');
+            const reqPlaces = new XMLHttpRequest();
+            const url = `http://localhost:3000/trackvac-api/place/${event.target.value}`;
+            reqPlaces.onreadystatechange = myfunction;
+            reqPlaces.open("GET", url, true);
+            reqPlaces.send(null);
+            async function myfunction() {
+                if (reqPlaces.readyState == 4) {
+                    let res = await reqPlaces.responseText;
+                    res = JSON.parse(res);
+                    nameText.value = res.name;
+                    locText.value = res.location;
+                    const tmpSpan = document.getElementById('globalPlace');
+                    tmpSpan.setAttribute('class', `${event.target.value}`);
+                }
+            }
+        }
+    </script>
+
+    <script>
+        async function editCenter() {
+            const nameText = document.getElementById('Nametext AddM3');
+            const locText = document.getElementById('Locationtext AddM3');
+            const globalPlaceID = document.getElementById('globalPlace').getAttribute('class');
+            const reqPlaces = new XMLHttpRequest();
+            const url = `http://localhost:3000/trackvac-api/place/${globalPlaceID}?_method=PUT`;
+            reqPlaces.onreadystatechange = myfunction;
+            reqPlaces.open("POST", url, true);
+            reqPlaces.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            reqPlaces.send(JSON.stringify({ "name": `${nameText.value}`, "location": `${locText.value}` }));
+            nameText.value = '';
+            locText.value = '';
+            async function myfunction() {
+                if (reqPlaces.readyState == 4) {
+                    let res = await reqPlaces.responseText;
+                    res = JSON.parse(res);
+                    if (res.success == true) {
+                        nameText.value = '';
+                        locText.value = '';
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script>
+        async function addCenter() {
+            const nameText = document.getElementById('AddM1');
+            const locText = document.getElementById('AddM12');
+            const globalCityID = document.getElementById('globalCity').getAttribute('class');
+            const reqPlaces = new XMLHttpRequest();
+            const url = `http://localhost:3000/trackvac-api/admin/place/${globalCityID}`;
+            reqPlaces.onreadystatechange = myfunction;
+            reqPlaces.open("POST", url, true);
+            reqPlaces.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            reqPlaces.send(JSON.stringify({ "name": `${nameText.value}`, "location": `${locText.value}` }));
+            async function myfunction() {
+                if (reqPlaces.readyState == 4) {
+                    let res = await reqPlaces.responseText;
+                    res = JSON.parse(res);
+                    if (res.name) {
+                        nameText.value = '';
+                        locText.value = '';
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function updateCityID(event) {
+            const tmpSpan = document.getElementById('globalCity');
+            tmpSpan.setAttribute('class', `${event.target.value}`);
+        }
+    </script>
+
+    <script>
+        async function searchArr(dropBox) {
+            const searchPlaces = new XMLHttpRequest();
+            const url = 'http://localhost:3000/trackvac-api/admin/placesarr';
+            searchPlaces.onreadystatechange = myfunction;
+            searchPlaces.open("GET", url, true);
+            searchPlaces.send(null);
+            const reqSec = document.getElementById(dropBox);
+            while (reqSec.firstChild) {
+                reqSec.firstChild.remove();
+            }
+            async function myfunction() {
+                if (searchPlaces.readyState == 4) {
+                    let res = await searchPlaces.responseText;
+                    res = JSON.parse(res);
+                    if (res[0].name) {
+                        const textHolder = document.getElementById('form-control');
+                        const suggestedPlaces = res.filter((el) => {
+                            if ((el.name).includes(textHolder.value)) {
+                                return el;
+                            }
+                        });
+                        const dump = document.createElement('option');
+                        dump.setAttribute('selected', true);
+                        dump.setAttribute('value', 'null');
+                        dump.innerHTML = 'Please Choose a District';
+                        reqSec.appendChild(dump);
+                        for (let i = 0; i < suggestedPlaces.length; i++) {
+                            const tmpOpt = document.createElement('option');
+                            tmpOpt.setAttribute('value', `${suggestedPlaces[i]._id}`);
+                            tmpOpt.innerHTML = suggestedPlaces[i].name;
+                            reqSec.appendChild(tmpOpt);
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script>
+        async function searchReturnDiv() {
+            const searchPlaces = new XMLHttpRequest();
+            const url = 'http://localhost:3000/trackvac-api/admin/placesarr';
+            searchPlaces.onreadystatechange = myfunction;
+            searchPlaces.open("GET", url, true);
+            searchPlaces.send(null);
+            const reqDiv = document.getElementById('deleteCenter');
+            while (reqDiv.firstChild) {
+                reqDiv.firstChild.remove();
+            }
+            async function myfunction() {
+                if (searchPlaces.readyState == 4) {
+                    let res = await searchPlaces.responseText;
+                    res = JSON.parse(res);
+                    if (res[0].name) {
+                        const textHolder = document.getElementById('form-control_1');
+                        const suggestedPlaces = res.filter((el) => {
+                            if ((el.name).includes(textHolder.value)) {
+                                return el;
+                            }
+                        });
+                        for (let i = 0; i < suggestedPlaces.length; i++) {
+                            const tmpDiv = document.createElement('div');
+                            tmpDiv.setAttribute('class', 'col-md-4');
+                            const tmpDiv_2 = document.createElement('div');
+                            tmpDiv_2.setAttribute('class', 'blog-post');
+                            const tmpDiv_3 = document.createElement('div');
+                            tmpDiv_3.setAttribute('class', 'post-media');
+                            const tmpDiv_4 = document.createElement('div');
+                            tmpDiv_3.setAttribute('class', 'post-desc');
+                            const image = document.createElement('img');
+                            image.setAttribute('src', '/images/testimonials.jpg');
+                            const h = document.createElement('h4');
+                            h.innerHTML = `${suggestedPlaces[i].name}`;
+                            const btn = document.createElement('button');
+                            btn.setAttribute('type', 'submit');
+                            btn.setAttribute('class', 'button1');
+                            btn.setAttribute('onClick', 'deleteSelf(this)');
+                            btn.setAttribute('id', `http://localhost:3000/trackvac-api/admin/place/${suggestedPlaces[i]._id}?_method=DELETE`)
+                            btn.innerHTML = 'Delete Center';
+                            tmpDiv_3.appendChild(image);
+                            tmpDiv_4.appendChild(h);
+                            tmpDiv_4.appendChild(btn);
+                            tmpDiv_2.appendChild(tmpDiv_3);
+                            tmpDiv_2.appendChild(tmpDiv_4);
+                            tmpDiv.appendChild(tmpDiv_2);
+                            reqDiv.appendChild(tmpDiv);
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

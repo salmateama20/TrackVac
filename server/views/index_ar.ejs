@@ -1,0 +1,530 @@
+<!doctype html>
+
+<html lang="en-gb" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <title>TrackVac</title>
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+  <!--styles -->
+  <link href="/Hfiles/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/Hfiles/css/font-awesome.css" rel="stylesheet">
+  <link href="/Hfiles/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+  <link href="/Hfiles/js/owl-carousel/owl.theme.css" rel="stylesheet">
+  <link href="/Hfiles/js/owl-carousel/owl.transitions.css" rel="stylesheet">
+  <link href="/Hfiles/css/magnific-popup.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/Hfiles/css/animate.css" />
+  <link rel="stylesheet" href="/Hfiles/css/etlinefont.css">
+  <link href="/Hfiles/css/style.css" type="text/css" rel="stylesheet" />
+  <link href="/Hfiles/css/maps.css" type="text/css" rel="stylesheet" />
+  <link href="/Hfiles/css/modal.css" type="text/css" rel="stylesheet" />
+</head>
+
+
+
+<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+        <script src="/Hfiles/js/html5shiv.js"></script>
+        <script src="/Hfiles/js/respond.min.js"></script>
+        <![endif]-->
+
+<body data-spy="scroll" data-target="#main-menu">
+
+  <!--Start Page loader -->
+  <!-- <div id="pageloader">   
+        <div class="loader">
+          <img src="/images/progress.gif" alt='loader' />
+        </div>
+   </div> -->
+  <!--End Page loader -->
+
+
+  <!--Start Navigation-->
+  <header id="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="fa fa-bars"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--Start Logo -->
+          <div class="logo-nav">
+            <a href="http://localhost:3000/trackvac-api/home">
+              <img src="/images/white png logo.png" alt="TrackVac logo" width="150rem" />
+            </a>
+          </div>
+          <!--End Logo -->
+          <div class="clear-toggle"></div>
+          <div id="main-menu" class="collapse scroll navbar-right">
+            <ul class="nav">
+
+              <li>
+                <ul>
+                  <li class=""> <a href="http://localhost:3000/trackvac-api/home/en">En</a></li>
+                  <li class=""> <a>|</a></li>
+                  <li class="active"> <a href="http://localhost:3000/trackvac-api/home/ar">عربي</a></li>
+                </ul>
+              </li>
+              <li> <a></a> </li>
+              <li> <a></a> </li>
+              <li> <a href="http://localhost:8000/trackvac-api/questions">أسئلة</a> </li>
+              <li> <a href="http://localhost:8000/trackvac-api/reviews">أراء المتطعمين</a> </li>
+              <li> <a href="http://localhost:3000/trackvac-api/about">من نحن</a> </li>
+              <li class="active"> <a href="http://localhost:3000/trackvac-api/home">الصفحة الرئيسية</a> </li>
+            </ul>
+          </div><!-- end main-menu -->
+        </div>
+      </div>
+    </div>
+    <div id="popUp">
+      <div class="close" id="close">x</div>
+      <div id="new"><span>تعرف علي شركائنا</span></div>
+      <h2>
+        <img src="/images/logo-ieee-hac.png" alt="" width="90px" height="55px">
+      </h2>
+      <p style="font-size: 10px;margin-bottom: 0px;line-height: 15px;">IEEE HAC توفر مجموعة موارد شاملة لإلهام و تمكين
+        المتطوعين من كل العالم لتنفيذ و دعم تكنولوجيا إنسانية مؤثرة
+        و أنشطة تنمية مستدامة على المستوى المحلي <br>projectID: #21-COV1-086 </p>
+      <br>
+      <a href="https://hac.ieee.org/" target="_blank" class="button">المزيد</a>
+    </div>
+    <div id="plus"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span></div>
+  </header>
+  <div id="body"></div>
+  <!--End Navigation-->
+
+
+  <!-- Start Slider  -->
+  <section id="home" class="home">
+    <div class="slider-overlay"></div>
+    <div class="flexslider">
+      <ul class="slides scroll">
+        <li class="first">
+          <div class="slider-text-wrapper">
+            <div class="container">
+              <div class="big">أخذت اللقاح؟</div>
+              <div class="small">أتريد مشاركة تجربتك لمساعدة الأخرين</div>
+              <a href="" class="middle btn btn-white" id="sliderbtn">شارك تجربتك</a>
+            </div>
+          </div>
+          <img src="/images/slider/vaccine.jpg" alt="">
+        </li>
+
+        <li class="secondary">
+          <div class="slider-text-wrapper">
+            <div class="container">
+              <div class="big">لم تأخذ اللقاح بعد؟</div>
+              <div class="small">تريد معرفة المزيد عن تجربة الأخرين مع اللقاح</div>
+              <a href="http://localhost:8000/trackvac-api/reviews" class=" middle btn btn-white" id="sliderbtn">أقر
+                التقييمات</a>
+            </div>
+          </div>
+          <img src="/images/slider/vaccine2.jpeg" alt="">
+        </li>
+
+        <li class="first">
+          <div class="slider-text-wrapper">
+            <div class="container">
+              <div class="big">لديك اسألة؟ </div>
+              <div class="small">لديك اسألة عن مكان اخذ اللقاح</div>
+              <a href="http://localhost:8000/trackvac-api/questions" class="middle btn btn-white" id="sliderbtn">اسأل
+                الأخرين</a>
+            </div>
+          </div>
+          <img src="/images/slider/vaccine2.jpg" alt="">
+        </li>
+
+        <li class="third">
+          <div class="slider-text-wrapper">
+            <div class="container">
+              <div class="big">لا تعرف إلي اين تتجه؟ </div>
+              <div class="small">تريد معرفة الأماكن الأعلي تقيماً</div>
+              <a href="#stats" class="middle btn btn-white" id="sliderbtn">الإحصاءات</a>
+            </div>
+          </div>
+          <img src="/images/slider/3.jpg" alt="">
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- End Slider  -->
+
+
+  <!--Start Features-->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+
+        <div class="title-box text-center">
+          <h2 class="title" style="color: #276678;">اللقاحات المتوفرة داخل مصر</h2>
+        </div>
+
+        <!-- Features Icon-->
+        <div class="col-md-4">
+          <div class="features-icon-box">
+            <div class="features-info">
+              <img src="/images/astra.png" alt="Astrazenca">
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Icon-->
+        <div class="col-md-4">
+          <div class="features-icon-box">
+
+            <div class="features-info">
+              <img src="/images/johnson.png" alt="johnson&Johnson" style="margin-top: 1.5rem;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Icon-->
+        <div class="col-md-4">
+          <div class="features-icon-box">
+
+            <div class="features-info">
+              <img src="/images/sinopharm.jpg" alt="sinopharm" height="100rem" style="padding-left: 2rem;">
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- /.row-->
+    </div> <!-- /.container-->
+  </section>
+  <!--End Features-->
+
+
+  <!-- Start Facts-->
+  <section id="facts" class="section parallax">
+    <div class="overlay"><img src="/images/page-header.jpg" alt='imageID'
+        style='width:auto; height:auto; display:block; height: 100%; width:100%'> </div>
+    <div class="container">
+      <div class="row">
+
+        <!-- Start Item-->
+        <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">
+          <span><i class="fa fa-user-md" aria-hidden="true" style="color: #D3E0EA;"></i></span>
+          <h3 style="color: #0f0f0f;">11.5+M</h3>
+          <span style="color: #121213;">جرعة</span>
+        </div>
+        <!-- End Item-->
+
+        <!-- Start Item-->
+        <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">
+          <span><i class="fa fa-check-circle" aria-hidden="true" style="color: #D3E0EA;"></i></span>
+          <h3 style="color: #070707;">4.93+M</h3>
+          <span style="color: #030303;">متلقحين بالكامل</span>
+        </div>
+        <!-- End Item-->
+
+        <!-- Start Item-->
+        <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">
+          <span><i class="fa fa-users" aria-hidden="true" style="color: #D3E0EA;"></i></span>
+          <h3 style="color: #0a0a0a;">4.9%</h3>
+          <span style="color: #080808;">نسبة متلقحين بالكامل</span>
+        </div>
+        <!-- End Item-->
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </section>
+  <!--End Facts-->
+
+
+  <!--Start Section-->
+  <section class="section" id="stats">
+    <div class="container">
+      <div class="title-box text-center">
+        <h2 class="title" style="color: #276678;">Top Rated Places</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+
+          <!--start tabs-->
+          <div class="col-md-12">
+            <div class="tabs tabs-main">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#one" data-toggle="tab">الأنظف</a></li>
+                <li><a href="#two" data-toggle="tab">الأسرع</a></li>
+                <li><a href="#three" data-toggle="tab">الأقل ازدحاماً</a></li>
+              </ul>
+              <div class="tab-content">
+
+                <!--Start Tab Item #1 -->
+                <div class="tab-pane in active" id="one">
+                  <!--Start Testimonial-->
+                  <section id="testimonials" class="section parallax">
+                    <div class="overlay"> <img src="/images/slider/vaccine.jpg" alt='imageID'
+                        style='width:auto; height:auto; display:block; height: 100%; width:100%'> </div>
+                    <div class="container">
+                      <div class="row">
+
+                        <div class="col-md-10" style="margin-left: 2.5rem;">
+                          <div class="testimonials-carousel">
+                            <% for(placeInd in homeReturn) {%>
+                              <!--Start Testimonial item #1-->
+                              <div class="items">
+                                <div class="title-box text-center white">
+                                  <h2 class="title" style="color: #0f0f0f; margin-top:0.25rem;">
+                                    <%= homeReturn[placeInd].cityName%>
+                                  </h2>
+                                </div>
+                                <div class="card mb-3">
+                                  <!--Google map-->
+                                  <div id="map-container-google-12" class="z-depth-1-half map-container-7"
+                                    style="height: 200px">
+                                    <iframe src="<%= homeReturn[placeInd].topClean.location %>" frameborder="0"
+                                      style="border:0" allowfullscreen></iframe>
+                                  </div>
+                                  <div class="card-body">
+                                    <h5 class="card-title" style="font-weight: 800;font-size: x-large;color:#1687A7">
+                                      <%= homeReturn[placeInd].topClean.placeName %>
+                                    </h5>
+                                    <p class="card-text" style="font-size: 25px;color: goldenrod;">
+                                      <% for(let i=0;i<homeReturn[placeInd].topClean.cleanRate;i++){%>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <% } %>
+                                          <% for(let i=homeReturn[placeInd].topClean.cleanRate;i<5;i++){%>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            <% } %>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <% } %>
+                          </div>
+                        </div>
+                      </div>
+                      <!--/.row-->
+                    </div>
+                    <!--/.container-->
+                  </section>
+                  <!--Start Testimonial-->
+                </div>
+                <!-- End Tab -->
+
+                <!--Start Tab Item #2 -->
+                <div class="tab-pane" id="two">
+                  <!--Start Testimonial-->
+                  <section id="testimonials" class="section parallax">
+                    <div class="overlay"> <img src="/images/slider/vaccine.jpg" alt='imageID'
+                        style='width:auto; height:auto; display:block; height: 100%; width:100%'> </div>
+                    <div class="overlay"> </div>
+                    <div class="container">
+                      <div class="row">
+
+
+                        <div class="col-md-10" style="margin-left: 2.5rem;">
+                          <div class="testimonials-carousel">
+                            <% for(placeInd in homeReturn) {%>
+                              <!--Start Testimonial item #1-->
+                              <div class="items">
+                                <div class="title-box text-center white">
+                                  <h2 class="title" style="color: #0a0a0a; margin-top:0.25rem;">
+                                    <%= homeReturn[placeInd].cityName%>
+                                  </h2>
+                                </div>
+                                <div class="card mb-3">
+                                  <!--Google map-->
+                                  <div id="map-container-google-12" class="z-depth-1-half map-container-7"
+                                    style="height: 200px">
+                                    <iframe src="<%= homeReturn[placeInd].topSpeed.location %>" frameborder="0"
+                                      style="border:0" allowfullscreen></iframe>
+                                  </div>
+                                  <div class="card-body">
+                                    <h5 class="card-title" style="font-weight: 800;font-size: x-large;color:#1687A7">
+                                      <%= homeReturn[placeInd].topSpeed.placeName %>
+                                    </h5>
+                                    <p class="card-text" style="font-size: 25px;color: goldenrod;">
+                                      <% for(let i=0;i<homeReturn[placeInd].topSpeed.speedRate;i++){%>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <% } %>
+                                          <% for(let i=homeReturn[placeInd].topSpeed.speedRate;i<5;i++){%>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            <% } %>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <% } %>
+                          </div>
+                        </div>
+                      </div>
+                      <!--/.row-->
+                    </div>
+                    <!--/.container-->
+                  </section>
+                  <!--Start Testimonial-->
+                </div>
+                <!-- End Tab -->
+
+                <!--Start Tab Item #3 -->
+                <div class="tab-pane" id="three">
+                  <!--Start Testimonial-->
+                  <section id="testimonials" class="section parallax">
+                    <div class="overlay"> <img src="/images/slider/vaccine.jpg" alt='imageID'
+                        style='width:auto; height:auto; display:block; height: 100%; width:100%'> </div>
+                    <div class="overlay"></div>
+                    <div class="container">
+                      <div class="row">
+
+
+                        <div class="col-md-10" style="margin-left: 2.5rem;">
+                          <div class="testimonials-carousel">
+                            <% for(placeInd in homeReturn) {%>
+                              <!--Start Testimonial item #1-->
+                              <div class="items">
+                                <div class="title-box text-center white">
+                                  <h2 class="title" style="color: #0a0a0a; margin-top:0.25rem;">
+                                    <%= homeReturn[placeInd].cityName%>
+                                  </h2>
+                                </div>
+                                <div class="card mb-3">
+                                  <!--Google map-->
+                                  <div id="map-container-google-12" class="z-depth-1-half map-container-7"
+                                    style="height: 200px">
+                                    <iframe src="<%= homeReturn[placeInd].topService.location %>" frameborder="0"
+                                      style="border:0" allowfullscreen></iframe>
+                                  </div>
+                                  <div class="card-body">
+                                    <h5 class="card-title" style="font-weight: 800;font-size: x-large;color:#1687A7">
+                                      <%= homeReturn[placeInd].topService.placeName %>
+                                    </h5>
+                                    <p class="card-text" style="font-size: 25px;color: goldenrod;">
+                                      <% for(let i=0;i<homeReturn[placeInd].topService.serviceRate;i++){%>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <% } %>
+                                          <% for(let i=homeReturn[placeInd].topService.serviceRate;i<5;i++){%>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            <% } %>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <% } %>
+                          </div>
+                        </div>
+                      </div>
+                      <!--/.row-->
+                    </div>
+                    <!--/.container-->
+                  </section>
+                  <!--Start Testimonial-->
+                </div>
+                <!-- End Tab -->
+
+              </div>
+            </div>
+          </div>
+          <!-- End Tabs-->
+          <div class="tab-content-main">
+            <div class="container">
+              <div class="tab-content">
+                <div class="tab-pane active in" id="tab-content-1">
+
+                  <!-- Features Icon-->
+                  <div class="col-md-6 margin-bottom-30">
+
+                    <!--Grid row-->
+                    <div class="row">
+                      <!--Grid column-->
+                      <div class="col-md-6 mb-4">
+
+                        <!--Card-->
+                        <div class="card card-cascade narrower">
+                          <!--/.Card content-->
+
+                        </div>
+                        <!--/.Card-->
+
+                      </div>
+                      <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+                  </div>
+                  <!--End features Icon-->
+                </div>
+                <!-- End Tab content 1-->
+
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    <!--/.tab-content-main-->
+    </div>
+    </div>
+
+    </div>
+    <!--/.row-->
+    </div>
+    <!--/.container-->
+  </section>
+  <!--End Section-->
+
+  <!--Start Footer-->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!--Start copyright-->
+        <div class="col-md-6 col-sm-6 col-xs-6"></div>
+        <div class="copyright">
+          <p style="margin-bottom: 0px;line-height: 15px;">© 2021 TrackVac
+            <!--start social icons-->
+          <div class="social-icons">
+            <ul>
+              <li><a href="https://www.facebook.com/Track-Vac-103424108805426/reviews/?ref=page_internal"
+                  target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li> <a href="https://twitter.com/TrackVacEgypt" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="mailto:example@email.com" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="https://www.instagram.com/trackvacegypt/?hl=en" target="_blank"><i
+                    class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+
+          <!--End social icons-->
+          </p>
+
+        </div>
+        <!--End copyright-->
+
+
+      </div> <!-- /.row-->
+    </div> <!-- /.container-->
+  </footer>
+  <!--End Footer-->
+
+  <!--Plugins-->
+  <script type="text/javascript" src="/Hfiles/js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="/Hfiles/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/Hfiles/js/owl-carousel/owl.carousel.js"></script>
+  <script type="text/javascript" src="/Hfiles/js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="/Hfiles/js/jquery.magnific-popup.min.js"></script>
+  <script type="text/javascript" src="/Hfiles/js/easing.js"></script>
+  <script type="text/javascript" src="/Hfiles/js/jquery.easypiechart.js"></script>
+  <script type="text/javascript" src="/Hfiles/js/jquery.appear.js"></script>
+  <script type="text/javascript" src="/Hfiles/js/jquery.parallax-1.1.3.js"></script>
+  <script type="text/javascript" src="/Hfiles/js/jquery.mixitup.min.js"></script>
+  <script type="text/javascript" src="/Hfiles/js/custom.js"></script>
+  <script type="text/javascript" src="/Hfiles/css/modal.js"></script>
+
+</body>
+
+</html>

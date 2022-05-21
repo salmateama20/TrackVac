@@ -1,0 +1,297 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <title>Questions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/ARQfiles/css/style_1.css" />
+    <link rel="stylesheet" href="/ARQfiles/css/style.css">
+    <link href="/ARQfiles/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+    <!-- BEGIN wrapper -->
+    <!--Start Navigation-->
+    <header id="header" style="background-color: #276678;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <!--Start Logo -->
+            <div class="logo-nav">
+              <a href="http://localhost:3000/trackvac-api/home">
+                <img src="/images/white png logo.png" alt="TrackVac logo" width="150rem" />
+              </a>
+            </div>
+            <!--End Logo -->
+            <div class="clear-toggle"></div>
+            <div id="main-menu" class="collapse scroll navbar-right">
+              <ul class="nav">
+
+                <li> <a href="http://localhost:3000/trackvac-api/admin/home">Home</a> </li>
+
+                <li> <a href="http://localhost:3000/trackvac-api/admin/reviews">Reviews</a> </li>
+
+                <li class="active"> <a href="http://localhost:3000/trackvac-api/admin/questions">Questions</a> </li>
+
+              </ul>
+            </div><!-- end main-menu -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="body"></div>
+    <div id="wrapper">
+      <h1 class="page-title">Questions</h1>
+      <label for="Governorate" style="font-size: 20px;">Choose a Governorate:</label>
+      <select name="Governorate" id="GovernorateDelete" style="width: 175px; height: 30px;" onChange="reqPlaces(event)">
+        <option value="null" selected>Please Choose a City</option>
+        <% for(let i=0;i<cities.length;i++){%>
+        <option value="<%=cities[i]._id%>">
+          <%=cities[i].name%>
+        </option>
+        <% } %>
+      </select>
+      <label for="Governorate" style="font-size: 20px;">Choose a District:</label>
+      <select name="Governorate" id="PlaceDelete" style="width: 175px; height: 30px" onChange="updateDB(event)">
+        <option value="null" selected>Please Choose a District</option>
+      </select>
+      <br><br>
+      <!-- BEGIN left sidebar -->
+      <div id="lsidebar">
+        <div class="box">
+          <h2><i class="fa fa-search" aria-hidden="true"></i> Search Questions</h2>
+          <div>
+            <input type="text" class='form-control' name="s" id="form-control" value="" />
+            <button onClick="searchArr(event)">Search</button>
+          </div>
+        </div>
+      </div>
+      <!-- END left sidebar -->
+      <!-- BEGIN content -->
+      <div id="content">
+
+        <!-- begin featured content -->
+        <div id="featured">
+          <h2>All Questions</h2>
+          <div id="wrapperReviews">
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    </div>
+    <!-- end featured content -->
+    </div>
+    <!-- END content -->
+    <!-- BEGIN footer -->
+    <div id="footer">
+      <p class="l">Copyright &copy; 2021 - <a href="http://ieee.org">TrackVac</a>
+        &middot; All Rights Reserved</p>
+    </div>
+    <!-- END footer -->
+
+    <script type="text/javascript" src="/ARQfiles/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/ARQfiles/js/javascript.js"></script>
+    <script type="text/javascript" src="/ARQfiles/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/ARQfiles/js/sortjs.js"></script>
+    <script>
+
+      async function reqPlaces(event) {
+        const reqPlaces = new XMLHttpRequest();
+        const url = `http://localhost:3000/trackvac-api/questions/${event.target.value}`;
+        reqPlaces.onreadystatechange = myfunction;
+        reqPlaces.open("GET", url, true);
+        reqPlaces.send(null);
+        const reqSec = document.getElementById('PlaceDelete');
+
+        if (event.target.value == 'null') {
+          while (reqSec.firstChild) {
+            reqSec.firstChild.remove();
+          }
+        }
+
+        if (event.target.value == 'null') {
+          return;
+        }
+
+        async function myfunction() {
+          if (reqPlaces.readyState == 4) {
+            let res = await reqPlaces.responseText;
+            res = JSON.parse(res);
+
+
+            while (reqSec.firstChild) {
+              reqSec.firstChild.remove();
+            }
+
+            const dump = document.createElement('option');
+            dump.setAttribute('selected', true);
+            dump.setAttribute('value', 'nill');
+            dump.innerHTML = 'Please Choose a District';
+            reqSec.appendChild(dump);
+
+            for (let i = 0; i < res.length; i++) {
+              const tmpOpt = document.createElement('option');
+              tmpOpt.setAttribute('value', `${res[i]._id}`);
+              tmpOpt.innerHTML = res[i].name;
+              reqSec.appendChild(tmpOpt);
+            }
+          }
+        }
+      }
+    </script>
+
+    <script>
+      async function updateDB(event) {
+        const mainDiv = document.getElementById('wrapperReviews');
+
+        const req = new XMLHttpRequest();
+        const url = `http://localhost:3000/trackvac-api/questions/cityID/${event.target.value}`;
+        req.onreadystatechange = myfunction;
+        req.open("GET", url, true);
+        req.send(null);
+
+        async function myfunction() {
+          if (req.readyState == 4) {
+            let res = await req.responseText;
+            res = JSON.parse(res);
+
+            while (mainDiv.firstChild) {
+              mainDiv.firstChild.remove();
+            }
+
+            for (let i = 0; i < res.length; i++) {
+              const wrapDiv = document.createElement('div');
+              wrapDiv.setAttribute('id', 'review');
+
+              const fetDiv = document.createElement('div');
+              fetDiv.setAttribute('class', 'featured');
+
+              const h3 = document.createElement('h3');
+              h3.setAttribute('style', 'font-weight: 700;color: #276678;');
+              h3.innerHTML = `Question No: ${i + 1}`;
+
+
+              const pB = document.createElement('p');
+              pB.setAttribute('style', 'color: #276678;');
+              pB.innerHTML = res[i].body;
+
+              const pD = document.createElement('p');
+              pD.setAttribute('class', 'details');
+              pD.innerHTML = `Date: ${res[i].date}`;
+
+              const pV = document.createElement('p');
+              pV.setAttribute('class', 'details');
+              pV.innerHTML = `Votes: ${res[i].vote}`;
+
+              const btn = document.createElement('button');
+              btn.setAttribute('class', 'btn');
+              btn.className += ' btn-danger';
+              btn.setAttribute('id', `http://localhost:3000/trackvac-api//admin/question/${res[i]._id}?_method=DELETE`)
+              btn.setAttribute('onClick', 'deleteSelf(this)');
+              btn.innerHTML = "Delete";
+
+              const br = document.createElement('br');
+
+              const hR = document.createElement('hr');
+
+              fetDiv.appendChild(h3);
+              fetDiv.appendChild(pB);
+              fetDiv.appendChild(pD);
+              fetDiv.appendChild(pV);
+              fetDiv.appendChild(br)
+              fetDiv.appendChild(btn);
+
+              wrapDiv.appendChild(fetDiv);
+              wrapDiv.appendChild(hR);
+
+              mainDiv.appendChild(wrapDiv);
+            }
+          }
+        }
+      }
+    </script>
+
+    <script>
+      function deleteSelf(el) {
+        const deletePlace = new XMLHttpRequest();
+        const url = `${el.getAttribute('id')}`;
+        deletePlace.onreadystatechange = myfunction;
+        deletePlace.open("POST", url, true);
+        deletePlace.setRequestHeader('X-HTTP-Method-Override', 'DELETE');
+        deletePlace.send(null);
+
+        async function myfunction() {
+          if (deletePlace.readyState == 4) {
+            let res = await deletePlace.responseText;
+            res = JSON.parse(res);
+            if (res.success == true) {
+              el.parentElement.parentElement.remove();
+              alert("Deleted Successfully");
+            }
+          }
+        }
+      }
+    </script>
+
+    <script>
+      async function searchArr(event) {
+        event.preventDefault();
+
+        const searchPlaces = new XMLHttpRequest();
+        const url = 'http://localhost:3000/trackvac-api/admin/placesarr';
+        searchPlaces.onreadystatechange = myfunction;
+        searchPlaces.open("GET", url, true);
+        searchPlaces.send(null);
+
+        const reqSec = document.getElementById('PlaceDelete');
+
+        while (reqSec.firstChild) {
+          reqSec.firstChild.remove();
+        }
+
+        async function myfunction() {
+          if (searchPlaces.readyState == 4) {
+            let res = await searchPlaces.responseText;
+            res = JSON.parse(res);
+            if (res[0].name) {
+              const textHolder = document.getElementById('form-control');
+
+              const suggestedPlaces = res.filter((el) => {
+                if ((el.name).includes(textHolder.value)) {
+                  return el;
+                }
+              });
+
+              const reqSec = document.getElementById('PlaceDelete');
+
+              while (reqSec.firstChild) {
+                reqSec.firstChild.remove();
+              }
+
+              const dump = document.createElement('option');
+              dump.setAttribute('selected', true);
+              dump.setAttribute('value', 'null');
+              dump.innerHTML = 'Please Choose a District';
+              reqSec.appendChild(dump);
+
+              for (let i = 0; i < suggestedPlaces.length; i++) {
+                const tmpOpt = document.createElement('option');
+                tmpOpt.setAttribute('value', `${suggestedPlaces[i]._id}`);
+                tmpOpt.innerHTML = suggestedPlaces[i].name;
+                reqSec.appendChild(tmpOpt);
+              }
+            }
+          }
+        }
+      }
+
+    </script>
+
+  </body>
+
+</html>

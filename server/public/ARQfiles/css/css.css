@@ -1,0 +1,104 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic);
+
+html, body{
+    font-family: 'Open Sans', sans-serif;
+}
+* {
+    background-color: #F6F5F5;
+}
+#card{
+    background-color: #F6F5F5;
+    border: none;
+    padding-bottom: 2rem;
+    padding-top: 10px;
+}
+#card .card-body{
+    background-color: #D3E0EA;
+}
+p,i,a,h5,h6{
+    background-color: #D3E0EA;
+}
+h1{
+    color: #276678;
+    font-weight: 700;
+}
+h6{
+    color: gray;
+    font-style: italic;
+}
+a i{
+   float: right;
+   color: grey;
+   font-size: 20px;
+}
+h5 i{
+    float: right;
+    color: red;
+    font-size: 20px;
+ }
+
+h5{
+    font-weight: 700;
+    color:#276678
+}
+p{
+    color:#276678;
+    }
+ /* Dropdown Button */
+.dropbtn,.sortbtn {
+    background-color: #276678;
+    /* color: white; */
+    padding: 0.4em;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover,.sortbtn:hover {
+    background-color: #D3E0EA;
+    color: #276678;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown,.sortdropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content,.sort-content {
+    display: none;
+    position: absolute;
+    background-color: #D3E0EA;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px gray;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a,.sort-content a {
+    color: #276678;
+    padding: 8px 10px;
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+.dropdown-content a:hover,.sort-content a:hover  {background-color: #F6F5F5}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show,.showsort{display:block;}
+  
+  .dropbtn i,.sortbtn i{
+      background-color: transparent;
+      color: #D3E0EA;
+  }
+
+
+  

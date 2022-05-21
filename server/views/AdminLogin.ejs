@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet">
+    <link href="/Afiles/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Afiles/css/font-awesome.css" rel="stylesheet">
+    <link href="/Afiles/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="js/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="js/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="/Afiles/css/magnific-popup.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Afiles/css/animate.css" />
+    <link rel="stylesheet" href="/Afiles/css/etlinefont.css">
+    <link href="/Afiles/css/style.css" type="text/css" rel="stylesheet" />
+
+    <title>
+        Admin Login
+    </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <style>
+        body {
+            background-color: #D3E0EA;
+            color: #1687A7;
+        }
+
+
+
+        .button {
+
+
+            border: none;
+            color: #D3E0EA;
+            background-color: #276678;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 8px 4px;
+            cursor: pointer;
+            border-radius: 12px;
+
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div style="margin-left: 600px;">
+        <h2> Login </h2>
+
+
+        <p class="para">
+            <strong>Please fill in the form to enter your account.</strong>
+        </p>
+
+
+
+        <form action="http://localhost:3000/trackvac-api/admin/validateAdmin" class="validated-form" method="POST">
+            <label for="Username" , class="write">
+
+                <strong>Username</strong></label>
+            <br>
+            <input id="SignUser" , class=" inputs" type="text" name="userName" placeholder="Username"
+                style="width: 400px;" required>
+            <br>
+            <label for="Password" , class="write">
+                <strong>Password</strong> </label>
+            <br>
+            <input id="Signpassword" , class=" inputs" type="password" name="password" placeholder="Password"
+                style="width: 400px;" required>
+            <br><br>
+            <button class="button">Login</button>
+        </form>
+
+
+    </div>
+
+    <footer style="background-color:#1687A7; margin-top: 250px; margin-bottom: 0px;">
+        <div class="container">
+            <div class="row">
+                <!--Start copyright-->
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="copyright">
+                        <p class="copyright1">Copyright © 2021 All Rights reserved by: <a
+                                href="http://www.ieee.org">TrackVac</a>
+                        </p>
+                    </div>
+                </div>
+                <!--End copyright-->
+
+                <!--start social icons-->
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li> <a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End social icons-->
+                <div>
+
+                </div>
+            </div> <!-- /.row-->
+        </div> <!-- /.container-->
+    </footer>
+
+</body>
+
+</html>
